@@ -7,19 +7,21 @@ Visit the To-Do List App to get started.
 
 ## How to Use
 ### `Creating` a ToDo
-Enter the title and description for your ToDo.
-Press Enter to activate the input fields OR Click the Add button to create your ToDo.
+Enter the title and description for your ToDo. <br>
+Press Enter to activate the input fields OR Click the Add button to create your ToDo.<br>
 ### `Deleting` a ToDo
-Locate the ToDo you want to delete.
-Click on the Delete button next to the ToDo.
+Locate the ToDo you want to delete.<br>
+Click on the Delete button next to the ToDo.<br>
 ### Project Structure
-<h4>index.html:</h4> The main HTML file for the project.
-<h4>styles.css:</h4> Contains the styles for the application.
-<h4>script.js:</h4> Manages the functionality of the To-Do List.
+<b>index.html:</b> The main HTML file for the project. <br>
+<b>styles.css:</b> Contains the styles for the application. <br>
+<b>script.js:</b> Manages the functionality of the To-Do List.
+
 ### Technologies Used
 `HTML`
-´CSS`
+`CSS`
 `JavaScript`
+
 ### Project Preview
 To-Do List App Preview
 
