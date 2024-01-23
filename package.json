@@ -13,6 +13,12 @@
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
   },
+  "devDependencies": {
+    "@adobe/css-tools": ">=4.3.2",
+    "postcss": ">=8.4.31",
+    "follow-redirects": ">=1.15.4",
+    "nth-check": ">=2.0.1"
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
