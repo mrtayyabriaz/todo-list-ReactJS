@@ -11,8 +11,20 @@ body{
   width: 3vw;
   min-width: 40px;
   pointer-events: none;
+  border-radius: 100%;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  -ms-border-radius: 100%;
+  -o-border-radius: 100%;
 }
-
+.form-control{
+  background-color: black;
+  color: white;
+}
+.form-control:focus{
+  background-color: black;
+  color: white;
+}
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
