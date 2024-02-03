@@ -19,9 +19,9 @@ export default function Header(props) {
           <li className="nav-item">
             <Link className="nav-link" to="/abouts">Abouts</Link>
           </li>
-          <li className="nav-item">
+          {/* <li className="nav-item">
             <Link className="nav-link" to="/Album">Album</Link>
-          </li>
+          </li> */}
         </ul>
         {(props.SearchBar === "True") ? //show search bar or not throw auguments
           <form className="d-flex" role="search">
