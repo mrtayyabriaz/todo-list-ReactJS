@@ -1,5 +1,5 @@
 import React from "react";
-import Todoitem from "./todoitem";
+import Todoitem from "./Ttodoitem";
 
 export default function Todos(props) {
   return (
