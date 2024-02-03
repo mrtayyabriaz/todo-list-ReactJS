@@ -1,11 +1,11 @@
 import "./App.css";
 import React, { useState, useEffect } from "react";
-import Header from "./MyCompanents/header";
+import Header from "./MyCompanents/Header";
 import AddToDo from "./MyCompanents/AddToDo";
-import Album from "./MyCompanents/Album";
-import Todos from "./MyCompanents/todos";
+// import Album from "./MyCompanents/Album";
+import Todos from "./MyCompanents/Todos";
 import Abouts from "./MyCompanents/Abouts";
-import Footer from "./MyCompanents/footer";
+import Footer from "./MyCompanents/Footer";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
