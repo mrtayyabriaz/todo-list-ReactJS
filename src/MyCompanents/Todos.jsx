@@ -1,18 +1,21 @@
 import React from "react";
 import Todoitem from "./Ttodoitem";
+import useTodo from "../context/TodoContext";
 
-export default function Todos(props) {
+export default function Todos() {
+  const {todos} = useTodo();
+
   return (
     <div className="container">
       <br />
-      <h2 className="text-center w-100">All Todos</h2>
+      <h2 className="text-center w-100">Todo List</h2>
 
       {
-        props.todos.length === 0 ?
+        todos.length === 0 ?
           "All Work Completed :)" :
 
-          props.todos.map((todo) => {
-            return <Todoitem todo={todo} key={todo.tno} OnDelete={props.OnDelete} />
+          todos.map((todo) => {
+            return <Todoitem todo={todo} key={todo.tno} />
           })
 
       }

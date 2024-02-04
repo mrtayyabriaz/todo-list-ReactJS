@@ -1,14 +1,20 @@
-const { createContext } = require("react");
+import { createContext, useContext } from "react";
 
 export const TodoContext = createContext(
-  [
-    {
-      id: 1,
-      Todo: "Learn React",
-      completed: false
-    },
-  ]
-  );
+  {
+    todos: [
+      {
+        tno: 1,
+        title: "Learn React",
+        desc: "Learn React with desc",
+        // completed: false,
+      }
+    ],
+    OnDelete: () => {},
+    addTodo: () => {},
+    OnEdit:() => {},
+  },
+);
 
 export const useTodo = () => {
   return useContext(TodoContext);
