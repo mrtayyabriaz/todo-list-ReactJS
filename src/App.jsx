@@ -1,12 +1,13 @@
-import "./App.css";
+import "./style/App.css";
 import React, { useState, useEffect } from "react";
 import Header from "./MyCompanents/Header";
 import AddToDo from "./MyCompanents/AddToDo";
 // import Album from "./MyCompanents/Album";
 import Todos from "./MyCompanents/Todos";
-import Abouts from "./MyCompanents/Abouts";
+import Use from "./MyCompanents/Use";
 import Footer from "./MyCompanents/Footer";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { TodoProvidor } from "./context/TodoContext";
 
 function App() {
   //===== Get Todos start =====
@@ -18,23 +19,21 @@ function App() {
   }
   //===== Get Todos end =====
 
-  //========== All todos===========
+  //========== todos stats ===========
   const [todos, settodos] = useState(initTodos);
-  //========== All todos===========
+  //========== todos stats ===========
 
-  //============ use Effect ===================
+  //============ update Todos ===================
   useEffect(() => {
-    //===== update Todos =====
     localStorage.setItem("todos", JSON.stringify(todos));
-    //===== update Todo =====
   }, [todos]);
-  //============ use Effect ===================
+  //============ update Todos ===================
 
   //===== Delete todo function start =====
-  const OnDelete = (todo) => {
+  const OnDelete = (todoid) => {
     settodos(
-      todos.filter((e) => {
-        return e !== todo;
+      todos.filter((todo) => {
+        return todo.tno !== todoid;
       })
     );
 
@@ -43,6 +42,12 @@ function App() {
     //===== update Todo =====
   };
   //===== Delete todo function end =====
+
+  //============ edit todos ( START ) ===============
+  const OnEdit = (newTodo) => {
+    settodos(todos.map((prev) => prev.tno === newTodo.tno ? newTodo : prev));
+  }
+  //============ edit todos  ( END )  ===============
 
   //===== Add todo function start =====
   let addTodo = (title, Desc) => {
@@ -63,27 +68,31 @@ function App() {
   //===== Add todo function end =====
 
   return (
-    <Router>
-      <Header title="ToDo List" SearchBar="False" />
+    <>
+      <TodoProvidor value={{ todos, OnDelete, addTodo, OnEdit }}>
 
-      <Routes>
-        <Route
-          exact
-          path="/"
-          element={
-            <>
-              <AddToDo addTodo={addTodo} />
-              <Todos todos={todos} OnDelete={OnDelete} />
-            </>
-          }
-        ></Route>
+        <Router>
+          <Header title="ToDo List" SearchBar="False" />
+          <Routes>
+            <Route
+              exact
+              path="/"
+              element={
+                <>
+                  <AddToDo />
+                  <Todos />
+                </>
+              }
+            ></Route>
 
-        <Route path="/abouts" element={<Abouts />}></Route>
-        {/* <Route path="/album" element={<Album />}></Route> */}
-      </Routes>
+            <Route path="/use" element={<Use />}></Route>
+            {/* <Route path="/album" element={<Album />}></Route> */}
+          </Routes>
 
-      <Footer />
-    </Router>
+          <Footer />
+        </Router>
+      </TodoProvidor>
+    </>
   );
 }
 

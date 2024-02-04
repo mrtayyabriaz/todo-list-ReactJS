@@ -1,5 +1,9 @@
+:root{
+  --primary:#282c34;
+  --background:rgb(1, 0, 27);
+}
 body{
-  background-color: rgb(1, 0, 27);
+  background-color: var(--background);
   color:white;
 }
 
@@ -28,11 +32,12 @@ body{
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
-  }
+    -webkit-animation: App-logo-spin infinite 20s linear;
+}
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: var(--primary);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -49,10 +54,18 @@ body{
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
-  }
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+}
   to {
     transform: rotate(360deg);
-  }
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+}
 }
 
 .todo-item{
@@ -60,4 +73,18 @@ body{
   border-radius: 10px;
   box-shadow: 0 1px 2px 0 rgba(60,64,67,.3),0 2px 6px 2px rgba(60,64,67,.15)!important;
   border: 2px solid rgb(58, 67, 254);
+}
+
+.btn-delete{
+  font-weight: 600;
+  font-size: larger;
+}
+.editinput{
+  background: var(--background);
+  border: 0;
+  color: white;
+  outline: none;
+}
+code{
+  color: white;
 }
