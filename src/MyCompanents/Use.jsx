@@ -1,11 +1,11 @@
 import React from "react";
-import "../style/about.min.css";
+import "../style/use.min.css";
 
 export default function Use() {
   return (
     <>
       {/* <h1 className="heading">Use</h1> */}
-      <div className="markdown-body">
+      <div className="use-body">
 
         <h1 id="to-do-list-app" className="mt-2">To-Do List App Usge</h1>
         <h2 id="overview">Overview</h2>

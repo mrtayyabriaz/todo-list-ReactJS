@@ -16,14 +16,14 @@ export default function todoitem({ todo }) {
         <div className='col-10'>
           <h2>
             <input type="text"
-              className='editinput'
+              className={`editinput ${editAble ? 'inputeditable' : ''}`}
               value={newTodo.title}
               onChange={(e) => { setnewTodo({ ...newTodo, title: e.target.value }) }}
               readOnly={!editAble}
             />
           </h2>
           <h6><input type="text"
-            className='editinput'
+            className={`editinput ${editAble ? 'inputeditable' : ''}`}
             value={newTodo.desc}
             onChange={(e) => { setnewTodo({ ...newTodo , desc: e.target.value}) }}
             readOnly={!editAble}
@@ -33,7 +33,7 @@ export default function todoitem({ todo }) {
           <button className="btn btn-delete"
             onClick={() => { OnDelete(todo.tno) }}
           >❌</button>
-          <button className="btn btn-delete"
+          <button className='btn btn-delete'
             onClick={() => {
               if (editAble) {
                 seteditAble(false);
