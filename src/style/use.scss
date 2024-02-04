@@ -1,13 +1,13 @@
 :root{
-  --primary:#282c34;
-  --background:rgb(1, 0, 27);
-}.markdown-body {
+  --background:rgb(44, 44, 45);
+}
+.use-body {
   color-scheme: dark;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   margin: 0;
   color: #e6edf3;
-  background-color:var(--background);
+  background-color: var(--background);
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
   font-size: 16px;
   line-height: 1.5;
@@ -17,21 +17,23 @@
     margin-left: 1rem;
     box-shadow: 0px 3px rgba(255, 255, 255, 0.735);
     width: max-content;
-  } 
-  
+  }
+
   h2 {
     margin-left: 2rem;
     box-shadow: 0px 2px rgba(255, 255, 255, 0.561);
     width: max-content;
   }
+
   h3 {
     margin-left: 3rem;
     // box-shadow: 0px 1px rgba(255, 255, 255, 0.32);
     // width: max-content;
   }
-  
+
   p {
     margin-left: 4rem;
+
     b {
       background: #dbdbdb3d;
       padding: 2px;

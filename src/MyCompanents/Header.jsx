@@ -4,7 +4,7 @@ import { Link} from "react-router-dom";
 
 export default function Header(props) {
   return (
-    <nav className="navbar navbar-dark bg-dark navbar-expand-sm">
+    <nav className="navbar text-white navbar-dark navbar-expand-sm">
     <div className="container-fluid">
     <img src={logo} className="App-logo" alt="logo" />
       <Link className="navbar-brand ms-3" to="/">{props.title}</Link>
