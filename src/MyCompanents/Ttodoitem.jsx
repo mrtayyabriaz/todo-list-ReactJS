@@ -1,4 +1,4 @@
-import React, {  useState } from 'react'
+import React, { useState } from 'react'
 // import React, { useEffect} from 'react'
 import useTodo from '../context/TodoContext'
 
@@ -16,16 +16,16 @@ export default function todoitem({ todo }) {
         <div className='col-10'>
           <h2>
             <input type="text"
-              className={`editinput ${editAble ? 'inputeditable' : ''}`}
+              className={`editinput titleinput ${editAble ? 'inputeditable' : ''}`}
               value={newTodo.title}
               onChange={(e) => { setnewTodo({ ...newTodo, title: e.target.value }) }}
               readOnly={!editAble}
             />
           </h2>
           <h6><input type="text"
-            className={`editinput ${editAble ? 'inputeditable' : ''}`}
+            className={`editinput descriptioninput ${editAble ? 'inputeditable' : ''}`}
             value={newTodo.desc}
-            onChange={(e) => { setnewTodo({ ...newTodo , desc: e.target.value}) }}
+            onChange={(e) => { setnewTodo({ ...newTodo, desc: e.target.value }) }}
             readOnly={!editAble}
           /></h6>
         </div>
